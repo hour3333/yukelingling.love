@@ -12,6 +12,14 @@
   --rose: #d63b50;
   --rose-soft: rgba(214, 59, 80, 0.08);
 
+  /* Monochrome Lock System */
+  --black: #000000;
+  --near-black: #0a0a0a;
+  --dark-gray: #151515;
+  --gray: #777777;
+  --light-gray: #b5b5b5;
+  --white: #ffffff;
+
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
