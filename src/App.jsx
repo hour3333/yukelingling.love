@@ -2,8 +2,7 @@
 // ===== COUNTDOWN SETTINGS =====
 // Change the unlock date and time below (Cambodia Time UTC+7).
 // Format: "YYYY-MM-DDTHH:MM:SS+07:00"
-// =========================================================================
-export const UNLOCK_DATE = "2026-09-19T00:00:00+07:00";
+export const UNLOCK_DATE = "2026-09-19T00:15:00+07:00";
 // =========================================================================
 
 import React, { useState, useEffect, useCallback } from "react";
