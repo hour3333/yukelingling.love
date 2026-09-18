@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #faf9f6;
+  --ivory-card: #ffffff;
+  --ivory-muted: #f4f1ea;
+  --ink: #18181b;
+  --charcoal: #27272a;
+  --muted: #71717a;
+  --subtle: #a1a1aa;
+  --hairline: rgba(0, 0, 0, 0.08);
+  --rose: #d63b50;
+  --rose-soft: rgba(214, 59, 80, 0.08);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  background-color: var(--ivory);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ivory);
+  color: var(--ink);
+  overflow-x: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Chapters below the fold — skip paint & layout until near viewport */
+[data-chapter-id] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 700px;
+}
+
+/* Editorial Drop Cap */
+.drop-cap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.6rem;
+  line-height: 0.8;
+  float: left;
+  margin-top: 0.1em;
+  margin-right: 0.16em;
+  margin-bottom: -0.04em;
+  color: #111111;
+  font-weight: 500;
+}
+
+/* Pure-transform bounce — no layout recalc, runs on compositor */
+@keyframes nudge-down {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+.scroll-nudge {
+  animation: nudge-down 1.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Subtle entrance fade-up */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Countdown Number Transition */
+@keyframes num-fade {
+  0% {
+    opacity: 0.35;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-num-change {
+  animation: num-fade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gentle breathing pulse for waiting indicators */
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-pulse-gentle {
+  animation: pulse-gentle 2.6s ease-in-out infinite;
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Horizontal scroll fade mask */
+.scroll-mask-x {
+  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+}
+
+/* Archival Paper Texture */
+.paper-archival {
+  background-color: #faf8f5;
+  background-image: radial-gradient(#ebe6dd 0.75px, transparent 0.75px);
+  background-size: 18px 18px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
