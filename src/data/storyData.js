@@ -368,16 +368,20 @@ The kind of laughter where your stomach aches and tears come out. Being able to 
       chapterRoman: "CHAPTER 08",
       monthYear: "MAY 2026",
       date: "April – May 2026",
-      title: "OUR DREAM OF EUROPE",
-      pull: "One day we will walk the streets of Europe hand in hand.",
-      story: `We spent hours talking about our dreams together.
+      title: "MAKING TIME FOR EACH OTHER",
+      pull: "Being together isn't always about having lots of free time. Sometimes, it's about making an effort even when life gets difficult and busy.",
+      story: `Month 8 was the beginning of our second semester at university, and life suddenly became much busier for both of us. I had a lot of schoolwork to deal with, while you also had many things going on in your own life. On top of that, you faced problems with your business and eventually had to close it.
 
-The biggest dream: traveling across Europe, discovering old streets, trying new foods, and making memories that belong solely to us. Knowing we're working toward a shared future makes every single day meaningful.`,
-      memory: "Staying up late planning our biggest dream: walking hand in hand through Europe.",
-      photoLayout: "editorial-single",
+It was a difficult time, and I know you had a lot on your mind. Even though we were both busy and dealing with our own problems, we still tried to stay connected day by day.
+
+We still went out together whenever we could, talked about our days, and called each other every night. Those small moments became important because they showed that even when life was busy, we still made time for each other.
+
+Month 8 taught me that being together isn't always about having lots of free time. Sometimes, it's about making an effort even when life gets difficult and busy. Looking back, I'm grateful for all those little calls, outings, and everyday moments we shared. ❤️`,
+      memory: "Calling each other every night, going out whenever we could, and choosing to stay connected through life's busiest days.",
+      photoLayout: "two-photo",
       photoMeta: {
-        caption: "Old Streets & Future Adventures · Europe Dream",
-        orientation: "landscape",
+        captionLeft: "Second Semester & Late Night Calls",
+        captionRight: "Always Making Time For Us",
       },
     },
     {
